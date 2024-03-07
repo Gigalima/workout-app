@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout - Gerenciamento de Treinos</title>
+</head>
+<body>
+    <h1>Gerencie seus treinos</h1>
+    <ul>
+        <li th:each="treino : ${treinos}">
+            <a th:href="@{/exercicios/{id}(id=${treino.id})}">
+                <span th:text="${treino.nome}"></span>
+            </a>
+        </li>
+    </ul>
+    <a th:href="@{treino}">Adicionar Treino</a>
+</body>
+</html>

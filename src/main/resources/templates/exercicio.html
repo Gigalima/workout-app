@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Exercício</title>
+</head>
+<body>
+    <h1>Adicionar Exercício</h1>
+    <form th:action="@{exercicios/{id}/exercicio" method="POST">
+        <label for="musculo"><h3>Escolha o grupo muscular e o respectivo exercício:</h3>Grupo: </label>
+        <input list="musculo" name="musculo" required>
+        <datalist id="musculo">
+            <select>
+                <option th:each="musculo : ${musculos}" th:value="${musculo.nome}"></option>
+            </select>
+        </datalist>
+        <br>
+        Exercício: <input type="text" name="exercicio" id="exericicio" required>
+        <input type="submit" value="Adicionar">
+    </form>
+
+</body>
+</html>
