@@ -1,2 +1,2 @@
-# workout-app
-Projeto para gerenciamento de Treinos de Musculação
+# Workout-app (Em desenvolvimento)
+Projeto para gerenciamento de Treinos de Musculação utilizando Java, Springboot e Thymeleaf
